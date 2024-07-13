@@ -10,10 +10,10 @@ assignees: ''
   To make it easier for us to help you, please include as much useful information as possible.
 
   Useful Links:
-  - tutorial: https://github.com/nhn/tui.image-editor/tree/master/docs
+  - tutorial: https://github.com/TheBrandwick/tui.image-editor/tree/master/docs
   - API/Example: https://nhn.github.io/tui.image-editor/latest
 
-  Before opening a new issue, please search existing issues https://github.com/nhn/tui.image-editor/issues
+  Before opening a new issue, please search existing issues https://github.com/TheBrandwick/tui.image-editor/issues
 -->
 
 **Summary**

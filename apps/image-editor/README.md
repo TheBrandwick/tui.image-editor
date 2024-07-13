@@ -97,8 +97,8 @@ tui-image-editor/
 
 ### Download Source Files
 
-- [Download bundle files from `dist` folder](https://github.com/nhn/tui.image-editor/tree/production/dist)
-- [Download all sources for each version](https://github.com/nhn/tui.image-editor/releases)
+- [Download bundle files from `dist` folder](https://github.com/TheBrandwick/tui.image-editor/tree/production/dist)
+- [Download all sources for each version](https://github.com/TheBrandwick/tui.image-editor/releases)
 
 ## 🔨 Usage
 
@@ -169,7 +169,7 @@ const instance = new ImageEditor(document.querySelector('#tui-image-editor'), {
 1. **Use default svg built** into imageEditor without setting svg file path (Features added since version v3.9.0).
 2. There is a way to use the **actual physical svg file** and **set the file location manually**.
 
-Can find more details in [this document](https://github.com/nhn/tui.image-editor/blob/master/docs/Basic-Tutorial.md#4-menu-submenu-svg-icon-setting).
+Can find more details in [this document](https://github.com/TheBrandwick/tui.image-editor/blob/master/docs/Basic-Tutorial.md#4-menu-submenu-svg-icon-setting).
 
 ### TypeScript
 

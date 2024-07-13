@@ -13,9 +13,9 @@ module.exports = () => ({
     library: { type: 'commonjs2' },
   },
   externals: {
-    'tui-image-editor': {
-      commonjs: 'tui-image-editor',
-      commonjs2: 'tui-image-editor',
+    '@jaymanyoo/tui-image-editor': {
+      commonjs: '@jaymanyoo/tui-image-editor',
+      commonjs2: '@jaymanyoo/tui-image-editor',
     },
     react: {
       commonjs: 'react',

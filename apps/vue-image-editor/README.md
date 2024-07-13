@@ -1,6 +1,6 @@
 # Vue wrapper for TOAST UI Image Editor
 
-> This is a Vue component wrapping [TOAST UI Image Editor](https://github.com/nhn/tui.image-editor).
+> This is a Vue component wrapping [TOAST UI Image Editor](https://github.com/TheBrandwick/tui.image-editor).
 
 [![npm version](https://img.shields.io/npm/v/@toast-ui/vue-image-editor.svg)](https://www.npmjs.com/package/@toast-ui/vue-image-editor)
 

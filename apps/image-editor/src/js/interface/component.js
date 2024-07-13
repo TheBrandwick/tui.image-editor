@@ -60,7 +60,14 @@ class Component {
    * @returns {fabric.Image}
    */
   getCanvasImage() {
-    return this.graphics.getCanvasImage();
+    const canvas = this.graphics.getCanvas();
+    const objects = canvas.getObjects();
+    let imageLayer = null;
+    imageLayer = objects[0];
+
+    return imageLayer;
+
+    // return this.graphics.getCanvasImage();
   }
 
   /**

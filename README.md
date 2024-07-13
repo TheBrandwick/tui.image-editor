@@ -2,20 +2,20 @@
 
 > Full featured image editor using HTML5 Canvas. It's easy to use and provides powerful filters.
 
-[![github version](https://img.shields.io/github/release/nhn/tui.image-editor.svg)](https://github.com/nhn/tui.image-editor/releases/latest)
+[![github version](https://img.shields.io/github/release/nhn/tui.image-editor.svg)](https://github.com/TheBrandwick/tui.image-editor/releases/latest)
 [![npm version](https://img.shields.io/npm/v/tui-image-editor.svg)](https://www.npmjs.com/package/tui-image-editor)
-[![license](https://img.shields.io/github/license/nhn/tui.image-editor.svg)](https://github.com/nhn/tui.image-editor/blob/master/LICENSE)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/nhn/tui.image-editor/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+[![license](https://img.shields.io/github/license/nhn/tui.image-editor.svg)](https://github.com/TheBrandwick/tui.image-editor/blob/master/LICENSE)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/TheBrandwick/tui.image-editor/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 [![code with hearth by NHN Cloud](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-NHN_CLOUD-ff1414.svg)](https://github.com/nhn)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 ## 📦 Packages
 
-- [toast-ui.image-editor](https://github.com/nhn/tui.image-editor/tree/master/apps/image-editor
+- [toast-ui.image-editor](https://github.com/TheBrandwick/tui.image-editor/tree/master/apps/image-editor
 ) - Plain JavaScript component implemented by [NHN Cloud](https://github.com/nhn).
-- [toast-ui.vue-image-editor](https://github.com/nhn/tui.image-editor/tree/master/apps/vue-image-editor
+- [toast-ui.vue-image-editor](https://github.com/TheBrandwick/tui.image-editor/tree/master/apps/vue-image-editor
 ) - **Vue** wrapper component is powered by [NHN Cloud](https://github.com/nhn).
-- [toast-ui.react-image-editor](https://github.com/nhn/tui.image-editor/tree/master/apps/react-image-editor
+- [toast-ui.react-image-editor](https://github.com/TheBrandwick/tui.image-editor/tree/master/apps/react-image-editor
 ) - **React** wrapper component is powered by [NHN Cloud](https://github.com/nhn).
 
 ![6 -20-2018 17-45-54](https://user-images.githubusercontent.com/35218826/41647896-7b218ae0-74b2-11e8-90db-d7805cc23e8c.gif)
@@ -170,17 +170,17 @@ For more information on PR's steps, please see links in the Contributing section
 
 ## 📙 Documents
 
-- [Getting Started](https://github.com/nhn/tui.image-editor/tree/master/docs/Basic-Tutorial.md)
-- [Tutorial](https://github.com/nhn/tui.image-editor/tree/master/docs)
+- [Getting Started](https://github.com/TheBrandwick/tui.image-editor/tree/master/docs/Basic-Tutorial.md)
+- [Tutorial](https://github.com/TheBrandwick/tui.image-editor/tree/master/docs)
 - [Example](http://nhn.github.io/tui.image-editor/latest/tutorial-example01-includeUi)
 - [API](http://nhn.github.io/tui.image-editor/latest)
 
 ## 💬 Contributing
 
-- [Code of Conduct](https://github.com/nhn/tui.image-editor/blob/master/CODE_OF_CONDUCT.md)
-- [Contributing guideline](https://github.com/nhn/tui.image-editor/blob/master/CONTRIBUTING.md)
-- [Issue guideline](https://github.com/nhn/tui.image-editor/blob/master/ISSUE_TEMPLATE.md)
-- [Commit convention](https://github.com/nhn/tui.image-editor/blob/production/docs/COMMIT_MESSAGE_CONVENTION.md)
+- [Code of Conduct](https://github.com/TheBrandwick/tui.image-editor/blob/master/CODE_OF_CONDUCT.md)
+- [Contributing guideline](https://github.com/TheBrandwick/tui.image-editor/blob/master/CONTRIBUTING.md)
+- [Issue guideline](https://github.com/TheBrandwick/tui.image-editor/blob/master/ISSUE_TEMPLATE.md)
+- [Commit convention](https://github.com/TheBrandwick/tui.image-editor/blob/production/docs/COMMIT_MESSAGE_CONVENTION.md)
 
 ## 🔩 Dependency
 
@@ -203,4 +203,4 @@ For more information on PR's steps, please see links in the Contributing section
 
 ## 📜 License
 
-[MIT LICENSE](https://github.com/nhn/tui.image-editor/blob/master/LICENSE)
+[MIT LICENSE](https://github.com/TheBrandwick/tui.image-editor/blob/master/LICENSE)

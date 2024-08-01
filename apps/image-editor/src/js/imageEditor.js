@@ -484,6 +484,13 @@ class ImageEditor {
    * @private
    */
   _onObjectActivated(props) {
+    const canvas = this._graphics.getCanvas();
+    const objects = canvas.getObjects();
+    let imageLayer = null;
+    imageLayer = objects[0];
+    if (props?.id === imageLayer.__fe_id) {
+      this.discardSelection();
+    }
     /**
      * The event when object is selected(aka activated).
      * @event ImageEditor#objectActivated
@@ -640,6 +647,14 @@ class ImageEditor {
    * @private
    */
   execute(commandName, ...args) {
+    const canvas = this._graphics.getCanvas();
+    const objects = canvas.getObjects();
+    let imageLayer = null;
+    imageLayer = objects[0];
+    if (imageLayer?.length > 0 && args[0] === imageLayer?.__fe_id && commandName === "changeTextStyle") {
+      this.discardSelection();
+    }
+    
     // Inject an Graphics instance as first parameter
     const theArgs = [this._graphics].concat(args);
 
@@ -798,6 +813,25 @@ class ImageEditor {
    *
    */
   startDrawingMode(mode, option) {
+    if (mode == "TEXT") {
+      this._onAddText();
+      this.addText("Double Click", {
+        position: {
+          x: 64,
+          y: 287.75,
+        },
+        styles: {
+          fill: "#ffbb3b",
+          fontSize: 50,
+          fontFamily: "Noto Sans",
+          fontStyle: "normal",
+          fontWeight: "normal",
+          underline: false,
+        },
+        autofocus: false,
+      });
+    }
+
     return this._graphics.startDrawingMode(mode, option);
   }
 
@@ -1177,8 +1211,22 @@ class ImageEditor {
    * });
    */
   addText(text, options) {
-    text = text || '';
-    options = options || {};
+    text = text || "Double Click";
+    options = options || {
+     position: {
+       x: 64,
+       y: 287.75,
+     },
+     styles: {
+       fill: "#ffbb3b",
+       fontSize: 50,
+       fontFamily: "Noto Sans",
+       fontStyle: "normal",
+       fontWeight: "normal",
+       underline: false,
+     },
+     autofocus: false,
+   };
 
     return this.execute(commands.ADD_TEXT, text, options);
   }
@@ -1216,6 +1264,13 @@ class ImageEditor {
    * });
    */
   changeTextStyle(id, styleObj, isSilent) {
+    const canvas = this._graphics.getCanvas();
+    const objects = canvas.getObjects();
+    let imageLayer = null;
+    imageLayer = objects[0];
+    if (id === imageLayer?.__fe_id) {
+      this.discardSelection();
+    }
     const executeMethodName = isSilent ? 'executeSilent' : 'execute';
 
     return this[executeMethodName](commands.CHANGE_TEXT_STYLE, id, styleObj);
@@ -1303,10 +1358,22 @@ class ImageEditor {
      * });
      */
 
-    this.fire(events.ADD_TEXT, {
-      originPosition: event.originPosition,
-      clientPosition: event.clientPosition,
-    });
+    if(event){
+      this.fire(events.ADD_TEXT, {
+        originPosition: event.originPosition,
+        clientPosition: event.clientPosition,
+      });
+    }else{
+      this.fire(events.ADD_TEXT, {
+        originPosition: { x: 64, y: 287.75 },
+        clientPosition: { x: 707, y: 349 },
+      });
+    }
+
+    // this.fire(events.ADD_TEXT, {
+    //   originPosition: event.originPosition,
+    //   clientPosition: event.clientPosition,
+    // });
   }
 
   /**

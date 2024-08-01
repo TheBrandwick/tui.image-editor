@@ -24,7 +24,7 @@ class Text extends Submenu {
       bold: false,
       italic: false,
       underline: false,
-      addText: false
+      addText: false,
     };
     this.align = 'tie-text-align-left';
     this._els = {
@@ -216,18 +216,18 @@ class Text extends Submenu {
     const button = event.target.closest('.tui-image-editor-button');
     if (button) {
       const [styleType] = button.className.match(/(bold|italic|underline|addText)/);
-      if(styleType === 'addText'){
-        this.actions.addText("Double Click", {
+      if (styleType === 'addText') {
+        this.actions.addText('Double Click', {
           position: {
             x: 64,
             y: 287.75,
           },
           styles: {
-            fill: "#ffbb3b",
+            fill: '#ffbb3b',
             fontSize: 50,
-            fontFamily: "Noto Sans",
-            fontStyle: "normal",
-            fontWeight: "normal",
+            fontFamily: 'Noto Sans',
+            fontStyle: 'normal',
+            fontWeight: 'normal',
             underline: false,
           },
           autofocus: false,
@@ -237,7 +237,7 @@ class Text extends Submenu {
         bold: { fontWeight: 'bold' },
         italic: { fontStyle: 'italic' },
         underline: { textDecoration: 'underline' },
-        addText: { textDecoration : 'addText'}
+        addText: { textDecoration: 'addText' },
       }[styleType];
 
       this.effect[styleType] = !this.effect[styleType];

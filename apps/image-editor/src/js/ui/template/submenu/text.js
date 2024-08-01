@@ -27,9 +27,9 @@ export default ({ locale, makeSvgIcon }) => `
             </div>
             <div class="tui-image-editor-button addText">
                 <div>
-                    ${makeSvgIcon(["normal", "active"], "text", true)}
+                    ${makeSvgIcon(['normal', 'active'], 'text', true)}
                 </div>
-                <label> ${locale.localize("Add Text")} </label>
+                <label> ${locale.localize('Add Text')} </label>
             </div>
         </li>
         <li class="tui-image-editor-partition">

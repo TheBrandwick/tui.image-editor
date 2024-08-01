@@ -25,6 +25,12 @@ export default ({ locale, makeSvgIcon }) => `
                 </div>
                 <label> ${locale.localize('Underline')} </label>
             </div>
+            <div class="tui-image-editor-button addText">
+                <div>
+                    ${makeSvgIcon(["normal", "active"], "text", true)}
+                </div>
+                <label> ${locale.localize("Add Text")} </label>
+            </div>
         </li>
         <li class="tui-image-editor-partition">
             <div></div>

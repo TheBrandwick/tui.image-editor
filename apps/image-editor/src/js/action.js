@@ -673,6 +673,7 @@ export default {
       changeSelectableAll: this.changeSelectableAll.bind(this),
       discardSelection: this.discardSelection.bind(this),
       stopDrawingMode: this.stopDrawingMode.bind(this),
+      addText: this.addText.bind(this)
     };
   },
 

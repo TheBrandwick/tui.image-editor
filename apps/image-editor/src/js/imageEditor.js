@@ -651,10 +651,14 @@ class ImageEditor {
     const objects = canvas.getObjects();
     let imageLayer = null;
     imageLayer = objects[0];
-    if (imageLayer?.length > 0 && args[0] === imageLayer?.__fe_id && commandName === "changeTextStyle") {
+    if (
+      imageLayer?.length > 0 &&
+      args[0] === imageLayer?.__fe_id &&
+      commandName === 'changeTextStyle'
+    ) {
       this.discardSelection();
     }
-    
+
     // Inject an Graphics instance as first parameter
     const theArgs = [this._graphics].concat(args);
 
@@ -813,19 +817,19 @@ class ImageEditor {
    *
    */
   startDrawingMode(mode, option) {
-    if (mode == "TEXT") {
+    if (mode === 'TEXT') {
       this._onAddText();
-      this.addText("Double Click", {
+      this.addText('Double Click', {
         position: {
           x: 64,
           y: 287.75,
         },
         styles: {
-          fill: "#ffbb3b",
+          fill: '#ffbb3b',
           fontSize: 50,
-          fontFamily: "Noto Sans",
-          fontStyle: "normal",
-          fontWeight: "normal",
+          fontFamily: 'Noto Sans',
+          fontStyle: 'normal',
+          fontWeight: 'normal',
           underline: false,
         },
         autofocus: false,
@@ -1211,22 +1215,22 @@ class ImageEditor {
    * });
    */
   addText(text, options) {
-    text = text || "Double Click";
+    text = text || 'Double Click';
     options = options || {
-     position: {
-       x: 64,
-       y: 287.75,
-     },
-     styles: {
-       fill: "#ffbb3b",
-       fontSize: 50,
-       fontFamily: "Noto Sans",
-       fontStyle: "normal",
-       fontWeight: "normal",
-       underline: false,
-     },
-     autofocus: false,
-   };
+      position: {
+        x: 64,
+        y: 287.75,
+      },
+      styles: {
+        fill: '#ffbb3b',
+        fontSize: 50,
+        fontFamily: 'Noto Sans',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        underline: false,
+      },
+      autofocus: false,
+    };
 
     return this.execute(commands.ADD_TEXT, text, options);
   }
@@ -1358,12 +1362,12 @@ class ImageEditor {
      * });
      */
 
-    if(event){
+    if (event) {
       this.fire(events.ADD_TEXT, {
         originPosition: event.originPosition,
         clientPosition: event.clientPosition,
       });
-    }else{
+    } else {
       this.fire(events.ADD_TEXT, {
         originPosition: { x: 64, y: 287.75 },
         clientPosition: { x: 707, y: 349 },

@@ -1,4 +1,4 @@
-import Range from '@/ui/tools/range';
+// import Range from '@/ui/tools/range';
 import Submenu from '@/ui/submenuBase';
 import templateHtml from '@/ui/template/submenu/rotate';
 import { toInteger, assignmentForDestroy } from '@/util';
@@ -26,22 +26,23 @@ class Rotate extends Submenu {
 
     this._els = {
       rotateButton: this.selector('.tie-rotate-button'),
-      rotateRange: new Range(
-        {
-          slider: this.selector('.tie-rotate-range'),
-          input: this.selector('.tie-rotate-range-value'),
-        },
-        defaultRotateRangeValues
-      ),
     };
   }
+
+  // rotateRange: new Range(
+  //   {
+  //     slider: this.selector('.tie-rotate-range'),
+  //     input: this.selector('.tie-rotate-range-value'),
+  //   },
+  //   defaultRotateRangeValues
+  // ),
 
   /**
    * Destroys the instance.
    */
   destroy() {
     this._removeEvent();
-    this._els.rotateRange.destroy();
+    // this._els.rotateRange.destroy();
 
     assignmentForDestroy(this);
   }
@@ -50,14 +51,18 @@ class Rotate extends Submenu {
     let resultAngle = angle;
 
     if (type === 'rotate') {
-      resultAngle = parseInt(this._els.rotateRange.value, 10) + angle;
+      let newAngle = this._els?.rotateRange?.value;
+      if(!newAngle){
+        newAngle = 0;
+      }
+      resultAngle = parseInt(newAngle, 10) + angle;
     }
 
     this._setRangeBarRatio(resultAngle);
   }
 
   _setRangeBarRatio(angle) {
-    this._els.rotateRange.value = angle;
+    // this._els?.rotateRange?.value = angle;
   }
 
   /**
@@ -72,7 +77,7 @@ class Rotate extends Submenu {
     // {rotate, setAngle}
     this.actions = actions;
     this._els.rotateButton.addEventListener('click', this.eventHandler.rotationAngleChanged);
-    this._els.rotateRange.on('change', this._changeRotateForRange.bind(this));
+    // this._els.rotateRange.on('change', this._changeRotateForRange.bind(this));
   }
 
   /**
@@ -81,7 +86,7 @@ class Rotate extends Submenu {
    */
   _removeEvent() {
     this._els.rotateButton.removeEventListener('click', this.eventHandler.rotationAngleChanged);
-    this._els.rotateRange.off();
+    // this._els.rotateRange.off();
   }
 
   /**
@@ -103,7 +108,10 @@ class Rotate extends Submenu {
    */
   _changeRotateForButton(event) {
     const button = event.target.closest('.tui-image-editor-button');
-    const angle = this._els.rotateRange.value;
+    let angle = this._els?.rotateRange?.value;
+    if(!angle){
+      angle = 0;
+    }
 
     if (button) {
       const rotateType = this.getButtonType(button, ['counterclockwise', 'clockwise']);

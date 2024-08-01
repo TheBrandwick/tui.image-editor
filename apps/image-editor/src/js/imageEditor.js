@@ -817,24 +817,24 @@ class ImageEditor {
    *
    */
   startDrawingMode(mode, option) {
-    if (mode === 'TEXT') {
-      this._onAddText();
-      this.addText('Double Click', {
-        position: {
-          x: 64,
-          y: 287.75,
-        },
-        styles: {
-          fill: '#ffbb3b',
-          fontSize: 50,
-          fontFamily: 'Noto Sans',
-          fontStyle: 'normal',
-          fontWeight: 'normal',
-          underline: false,
-        },
-        autofocus: false,
-      });
-    }
+    // if (mode == "TEXT") {
+    //   this._onAddText();
+    //   this.addText("Double Click", {
+    //     position: {
+    //       x: 64,
+    //       y: 287.75,
+    //     },
+    //     styles: {
+    //       fill: "#ffbb3b",
+    //       fontSize: 50,
+    //       fontFamily: "Noto Sans",
+    //       fontStyle: "normal",
+    //       fontWeight: "normal",
+    //       underline: false,
+    //     },
+    //     autofocus: false,
+    //   });
+    // }
 
     return this._graphics.startDrawingMode(mode, option);
   }

@@ -233,6 +233,7 @@ class Text extends Submenu {
           autofocus: false,
         });
       }
+
       const styleObj = {
         bold: { fontWeight: 'bold' },
         italic: { fontStyle: 'italic' },

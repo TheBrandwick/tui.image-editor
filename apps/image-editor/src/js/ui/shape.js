@@ -180,6 +180,9 @@ class Shape extends Submenu {
    * @param {number} value - expect value for strokeRange change
    */
   setStrokeValue(value) {
+    if (!value) {
+      value = 1;
+    }
     this._els.strokeRange.value = value;
     this._els.strokeRange.trigger('change');
   }

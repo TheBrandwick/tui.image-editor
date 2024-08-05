@@ -223,6 +223,10 @@ export default class Shape extends Component {
 
       const shapeObj = this._createInstance(type, extendOption);
       const objectProperties = this.graphics.createObjectProperties(shapeObj);
+      shapeObj.height = 40;
+      shapeObj.width = 40;
+      objectProperties.height = 40;
+      objectProperties.width = 40;
 
       this._bindEventOnShape(shapeObj);
 
@@ -323,6 +327,12 @@ export default class Shape extends Component {
    */
   _createInstance(type, options) {
     let instance;
+    if (type === "circle") {
+      options.height = 40;
+      options.width = 40;
+      options.rx = 20;
+      options.ry = 20;
+    }
 
     switch (type) {
       case 'rect':

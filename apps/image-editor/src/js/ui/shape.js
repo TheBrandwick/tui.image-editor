@@ -181,7 +181,7 @@ class Shape extends Submenu {
    */
   setStrokeValue(value) {
     if (!value) {
-      value = 1;
+      value = 2;
     }
     this._els.strokeRange.value = value;
     this._els.strokeRange.trigger('change');

@@ -30,14 +30,14 @@ export default ({ locale, makeSvgIcon }) => `
             <div></div>
         </li>
         <li class="tie-shape-color-button">
-            <div class="tie-color-fill" title="${locale.localize('Fill')}"></div>
-            <div class="tie-color-stroke" title="${locale.localize('Stroke')}"></div>
+            <div class="tie-color-fill" title="${locale.localize('Fill colour')}"></div>
+            <div class="tie-color-stroke" title="${locale.localize('Outline colour')}"></div>
         </li>
         <li class="tui-image-editor-partition only-left-right">
             <div></div>
         </li>
         <li class="tui-image-editor-newline tui-image-editor-range-wrap">
-            <label class="range">${locale.localize('Stroke')}</label>
+            <label class="range">${locale.localize('Outline thickness')}</label>
             <div class="tie-stroke-range"></div>
             <input class="tie-stroke-range-value tui-image-editor-range-value" value="0" />
         </li>

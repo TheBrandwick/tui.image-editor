@@ -5,6 +5,7 @@
 export default ({ locale }) => `
     <ul class="tui-image-editor-submenu-item">
         <li class="tui-image-editor-submenu-align">
+            <label style="font-weight: bold; font-size: 13px;">Filters</label>
             <div class="tui-image-editor-checkbox-wrap fixed-width">
                 <div class="tui-image-editor-checkbox">
                     <label>
@@ -111,7 +112,7 @@ export default ({ locale }) => `
                     <div class="tui-image-editor-checkbox">
                         <label>
                             <input type="checkbox" class="tie-color-filter">
-                            <span>${locale.localize('Color Filter')}</span>
+                            <span>${locale.localize('Colour Filter')}</span>
                         </label>
                     </div>
                 </div>

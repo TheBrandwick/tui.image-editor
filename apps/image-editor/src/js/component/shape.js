@@ -327,7 +327,7 @@ export default class Shape extends Component {
    */
   _createInstance(type, options) {
     let instance;
-    if (type === "circle") {
+    if (type === 'circle') {
       options.height = 40;
       options.width = 40;
       options.rx = 20;

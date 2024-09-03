@@ -978,6 +978,7 @@ class Graphics {
     this._canvas = new fabric.Canvas(canvasElement, {
       containerClass: 'tui-image-editor-canvas-container',
       enableRetinaScaling: false,
+      preserveObjectStacking: true,
     });
   }
 

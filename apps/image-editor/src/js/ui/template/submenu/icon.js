@@ -102,7 +102,7 @@ export default ({ locale, makeSvgIcon }) => `
             <div></div>
         </li>
         <li>
-            <div class="tie-icon-color" title="${locale.localize('Color')}"></div>
+            <div class="tie-icon-color" title="${locale.localize('Select colour')}"></div>
         </li>
     </ul>
 `;
